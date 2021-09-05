@@ -21,7 +21,9 @@ function HomePageUsuario() {
             }
         }).then((response) => {
             console.log(response.data.contatos);
-            setContatos(response.data.contatos);
+            if(response.data.contatos){
+                setContatos(response.data.contatos);
+            }
         }).catch((error) => {
             //console.log(error.response.data.message);
         });
