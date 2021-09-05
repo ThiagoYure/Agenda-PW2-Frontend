@@ -24,8 +24,7 @@ function Login() {
             storage.setUser(token.id);
             history.push('/home');
         }).catch((error) => {
-            //alert(error.response.data.message);
-            alert(error);
+            alert(error.response.data.message);
         });
     }
 
